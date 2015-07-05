@@ -1,6 +1,6 @@
 <?php
 
-// Page créé par Shepard [Fabian Pijcke] <Shepard8@laposte.net>
+// Page créé par Shepard [ Pijcke] <Shepard8@laposte.net>
 // Arno Esterhuizen <arno.esterhuizen@gmail.com>
 // et Romain Bourdon <rromain@romainbourdon.com>
 // et Hervé Leclerc <herve.leclerc@alterway.fr>
