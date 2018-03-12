@@ -1,0 +1,70 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="scotchTodo">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Node/Angular Todo App</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		#todo-list 				{ margin-bottom:30px; }
+		#todo-form 	 			{ margin-bottom:50px; }
+	</style>
+
+	<!-- SPELLS -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+	<script src="core.js"></script>
+	
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
+<body ng-controller="mainController">
+	<div class="container">
+
+		<!-- HEADER AND TODO COUNT -->
+		<div class="jumbotron text-center">
+			<h1>Excel Upload <span class="label label-info">{{ todos.length }}</span></h1>
+		</div>
+
+		<!-- TODO LIST -->
+		<div id="todo-list" class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+
+				<!-- LOOP OVER THE TODOS IN $scope.todos -->
+				<div ng-repeat="todo in todos">
+					<pre id="json">
+						{{ todo }}
+					</pre>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- FORM TO CREATE TODOS -->
+		<div id="todo-form" class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<form  enctype="multipart/form-data">
+					<div class="form-group">
+						<label for="myFileField">Select a file: </label>
+						<input type="file" demo-file-model="myFile"  class="form-control" id ="myFileField"/>
+					</div>
+					<button ng-click="uploadFile()" class = "btn btn-primary">Upload File</button>
+					
+					<button ng-click="getmalereport()" class = "btn btn-primary">Get male age report</button>
+					<button ng-click="getfemalereport()" class = "btn btn-primary">Get female age report</button>
+					
+				</form>
+			</div>
+		</div>
+		<div class="text-center text-muted">
+			
+		</div>
+	</div>
+</body>
+</html>
